@@ -1,0 +1,26 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  .chart-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+
+    .condensed-select {
+      width: 100px;
+      font-size: 12px;
+      ::ng-deep .mat-form-field-wrapper { padding-bottom: 0; }
+    }
+  }
+
+  .canvas-wrapper {
+    position: relative;
+    height: 320px;
+  }
+}

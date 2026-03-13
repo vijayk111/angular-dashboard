@@ -1,0 +1,61 @@
+.table-container {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #003349;
+  }
+
+  .subtext {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #67768a;
+  }
+
+  .table-actions {
+    display: flex;
+    gap: 10px;
+
+    button {
+      border-radius: 10px;
+      min-width: 40px;
+      height: 34px;
+      font-size: 12px;
+      color: #003349;
+      background: rgba(0, 168, 224, 0.08);
+    }
+
+    mat-icon { font-size: 18px; }
+  }
+}
+
+.custom-table {
+  width: 100%;
+  background: transparent;
+
+  th {
+    color: #003349;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .status-badge {
+    display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold;
+    &.admin { color: #2ecc71; background: rgba(46, 204, 113, 0.1); }
+    &.activ { color: #2ecc71; background: rgba(46, 204, 113, 0.1); }
+    &.admin-red { color: #e74c3c; background: rgba(231, 76, 60, 0.1); }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin-right: 8px; }
+  }
+}

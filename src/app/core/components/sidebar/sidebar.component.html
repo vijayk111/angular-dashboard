@@ -1,0 +1,27 @@
+<div class="sidebar-wrapper" [class.collapsed]="collapsed">
+  <div>
+    <div class="sidebar-header">
+    <div class="brand">
+      <mat-icon class="brand-icon">dashboard</mat-icon>
+      <span class="brand-name">Gemini</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a
+      *ngFor="let item of menuItems; let i = index"
+      class="nav-item"
+      [class.active]="activeIndex === i"
+      (click)="setActive(i)">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <span class="label">{{ item.label }}</span>
+    </a>
+  </nav>
+
+  </div>
+  <div class="sidebar-footer">
+    <button mat-icon-button class="collapse-btn" (click)="toggle()" aria-label="Toggle sidebar">
+      <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+    </button>
+  </div>
+</div>

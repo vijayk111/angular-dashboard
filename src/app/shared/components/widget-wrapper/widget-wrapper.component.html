@@ -1,0 +1,17 @@
+<div class="widget-card" [class.is-maximized]="isMaximized$ | async">
+  <div class="widget-header">
+    <div class="title-group">
+      <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+      <span>{{title}}</span>
+    </div>
+    <div class="actions">
+      <button mat-icon-button (click)="onExpand()">
+        <mat-icon>{{ (isMaximized$ | async) ? 'fullscreen_exit' : 'fullscreen' }}</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="widget-content">
+    <ng-content></ng-content>
+  </div>
+</div>

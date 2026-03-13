@@ -1,0 +1,25 @@
+<div class="dashboard-page">
+  <header class="dashboard-header">
+    <h1>Dashboard</h1>
+  </header>
+
+  <section class="dashboard-grid">
+    <div class="chart-wrapper">
+      <app-chart-card></app-chart-card>
+    </div>
+
+    <div class="map-wrapper">
+      <app-widget-wrapper title="Map Destination" icon="place">
+        <div class="map-placeholder">
+          <span>Map goes here</span>
+        </div>
+      </app-widget-wrapper>
+    </div>
+
+    <div class="table-wrapper">
+      <app-widget-wrapper title="Data Table" icon="table_chart">
+        <app-data-table-card></app-data-table-card>
+      </app-widget-wrapper>
+    </div>
+  </section>
+</div>

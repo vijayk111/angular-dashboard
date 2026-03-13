@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+// AT&T Brand Colors
+$att-blue: #00A8E0;
+$att-navy: #003349;
+$bg-faint: #f0f4f7;
+
+// Modern UI Mixins
+@mixin glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 51, 73, 0.05);
+}
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #e8f0f5 0%, #d4e4ed 50%, #f0f7fa 100%);
+  overflow-x: hidden;
+}
+
+// Override Gridster to remove ugly borders
+gridster {
+  background: transparent !important;
+  .gridster-item { @include glass-panel; overflow: hidden; }
+}
